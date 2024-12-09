@@ -1,8 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { space } from "postcss/lib/list";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 
@@ -27,7 +26,8 @@ export default function Home() {
     return result;
   }; 
  
-    const handleSubmit= async()=>{
+    const handleSubmit= async(e)=>{
+      e.preventDefault()
       const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
       if (!urlPattern.test(longUrl)) {
         alert("Please enter a valid URL");
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <main className=" p-8">
       <div className="max-w-2xl mx-auto mt-10">
-        <form className="bg-white shadow-md rounded-lg p-6" action={handleSubmit}>
+        <form className="bg-white shadow-md rounded-lg p-6" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="longUrl" className="block text-gray-700 text-sm font-medium mb-2">
               Enter Long URL
