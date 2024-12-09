@@ -44,7 +44,7 @@ const Navbar = () => {
     <div className={`bg-gray-200  flex justify-start ${isMobile && 'hidden'}`}>
      <ul className=' flex flex-col gap-2 mx-3 py-2'>
        <Link href={"/"}><li>Home</li></Link> 
-       <Link href={"/"}><li>About</li></Link> 
+       <Link href={"/about"}><li>About</li></Link> 
      </ul>
  </div>
     </>
