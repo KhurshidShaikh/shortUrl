@@ -121,9 +121,7 @@ export default function Home() {
           </button>
            
          { generated && <div className="flex-col md:flex mx-auto my-4">
-            <h4>   
-              Your Short Url :  
-              </h4>
+            <h4>Your Short Url:</h4>
               <Link href={generatedshortUrl} passHref legacyBehavior>
               <a className="text-blue-400  font-semibold block" target="_blank">{generatedshortUrl}</a>
               </Link>  
@@ -131,7 +129,7 @@ export default function Home() {
               
          <button
            onClick={() => {
-             navigator.clipboard.writeText(generatedshortUrl);
+             navigator.clipboard.writeText(generatedshortUrl)
            }}
            className="bg-gray-100 text-gray-600 px-3 py-1 rounded mt-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
          >

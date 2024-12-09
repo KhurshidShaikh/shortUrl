@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Navbar = () => {
     const[isMobile,setIsMobile]=useState(true)
   
-
+  
   return (
     <>
     <nav className="bg-green-500 border-b border-gray-200 shadow-xl py-1 sticky top-0">
