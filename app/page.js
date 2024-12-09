@@ -125,7 +125,7 @@ export default function Home() {
               <Link href={generatedshortUrl} passHref legacyBehavior>
               <a className="text-blue-400  font-semibold block" target="_blank">{generatedshortUrl}</a>
               </Link>  
-              {alreadyExists && <span className="text-red-500 block ">(URL already exists)</span>}
+              {alreadyExists && <span className="text-red-500 block ">&#40;URL already exists&#41;</span>}
               
          <button
            onClick={() => {
