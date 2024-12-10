@@ -28,7 +28,8 @@ export default function Home() {
  
     const handleSubmit= async(e)=>{
       e.preventDefault()
-      const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+      const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=+#]*)*$/;
+
       if (!urlPattern.test(longUrl)) {
         alert("Please enter a valid URL");
         return;
